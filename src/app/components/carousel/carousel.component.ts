@@ -23,7 +23,11 @@ export class CarouselComponent {
           bannerList.forEach((item: any, index: any) => {
             bannerList[index].bannerImage_name = item.bannerImage_name;
           });
-          this.bannerList = bannerList;
+          if (bannerList.length === 1) {
+            this.bannerList = [...bannerList, ...bannerList];
+          } else {
+            this.bannerList = bannerList;
+          }
         }
       })
     );
