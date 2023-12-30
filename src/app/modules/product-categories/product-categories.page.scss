@@ -12,6 +12,12 @@
   width: 350px;
   height: 200px;
   cursor: pointer;
+  .mb-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
 }
 
 .card:hover {
