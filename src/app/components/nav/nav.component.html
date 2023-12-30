@@ -1,0 +1,123 @@
+<!-- Responsive Menu Begin -->
+<div
+  class="offcanvas-menu-overlay"
+  [ngClass]="{ active: isDrilldownMenuActive }"
+  (click)="drilldownMenuClose()"
+></div>
+<div
+  class="offcanvas-menu-wrapper"
+  [ngClass]="{ active: isDrilldownMenuActive }"
+>
+  <div class="offcanvas__logo">
+    <a (click)="navigateTo('/')"><img src="img/logo.png" alt="" /></a>
+  </div>
+  <!-- <div id="mobile-menu-wrap"> -->
+  <ul class="offcanvas__widget">
+    <li>
+      <a
+        (click)="navigateTo('/')"
+        [ngClass]="{ active: currentUrl === '/' ? true : false }"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        (click)="navigateTo('about')"
+        [ngClass]="{ active: currentUrl === '/about' ? true : false }"
+        >About</a
+      >
+    </li>
+    <li>
+      <a
+        (click)="navigateTo('product-categories')"
+        [ngClass]="{
+          active: currentUrl === '/product-categories' ? true : false
+        }"
+        >Product Categories</a
+      >
+    </li>
+  </ul>
+  <!-- </div> -->
+  <div class="offcanvas__btn">
+    <a (click)="navigateTo('enquiry')" class="primary-btn">Enquiry</a>
+  </div>
+  <ul class="offcanvas__widget">
+    <li><i class="fa fa-phone"></i> 1-677-124-44227</li>
+    <li><i class="fa fa-map-marker"></i> Los Angeles Gournadi, 1230 Bariasl</li>
+    <li><i class="fa fa-clock-o"></i> Mon to Sat 9:00am to 18:00pm</li>
+  </ul>
+  <div class="offcanvas__social">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-dribbble"></i></a>
+  </div>
+</div>
+<!-- Responsive Menu End -->
+
+<!-- Header Section Begin -->
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <ul class="header__top__left">
+            <li><i class="fa fa-phone"></i> 1-677-124-44227</li>
+            <li>
+              <i class="fa fa-map-marker"></i> Los Angeles Gournadi, 1230
+              Bariasl
+            </li>
+            <li><i class="fa fa-clock-o"></i> Mon to Sat 9:00am to 18:00pm</li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="header__top__right">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="header__logo">
+          <a routerLink="/"><img src="img/logo.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="col-lg-10">
+        <div class="header__menu__option">
+          <nav class="header__menu">
+            <ul>
+              <li [ngClass]="{ active: currentUrl === '/' ? true : false }">
+                <a routerLink="/">Home</a>
+              </li>
+              <li
+                [ngClass]="{ active: currentUrl === '/about' ? true : false }"
+              >
+                <a routerLink="/about">About</a>
+              </li>
+              <li
+                [ngClass]="{
+                  active: currentUrl === '/product-categories' ? true : false
+                }"
+              >
+                <a routerLink="/product-categories">Product Categories</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__btn">
+            <a routerLink="/enquiry" class="primary-btn">Enquiry</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="canvas__open" (click)="drilldownMenuOpen()">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+</header>
+<!-- Header Section End -->

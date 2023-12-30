@@ -1,0 +1,14 @@
+.offcanvas__widget {
+    a {
+        font-size: 15px;
+        color: #111111;
+        list-style: none;
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+    a:hover,
+    a.active {
+        color: #13a2b7 !important;
+    }
+}
