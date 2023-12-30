@@ -23,7 +23,6 @@ export class HomeComponent {
         });
         this.bannerList = bannerList;
       }
-      console.log(this.bannerList)
     });
   }
 }
