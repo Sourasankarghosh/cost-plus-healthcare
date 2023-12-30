@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
-import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MdbCarouselModule,
     BrowserAnimationsModule,
     HttpClientModule
   ],
