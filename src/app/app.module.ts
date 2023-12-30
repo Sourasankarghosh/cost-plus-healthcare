@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { AboutComponent } from './components/about/about.component';
+import { HomeSectionModule } from 'src/app/modules/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -13,14 +13,14 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     NavComponent,
-    FooterComponent,
-    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    HomeSectionModule
   ],
   providers: [],
   bootstrap: [AppComponent],
