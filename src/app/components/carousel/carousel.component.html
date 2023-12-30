@@ -2,7 +2,7 @@
   <mdb-carousel [indicators]="true" [animation]="'fade'">
     <mdb-carousel-item *ngFor="let data of bannerList">
       <img
-        [src]="data.bannerImage_name"
+        [src]="bannerPath + data.bannerImage_name"
         class="d-block w-100 carousel-img"
         [alt]="data.title"
       />
@@ -19,7 +19,7 @@
   class="hero spad set-bg"
   *ngIf="bannerList && bannerList.length === 1"
   [ngStyle]="{
-    'background-image': 'url(' + bannerList[0].bannerImage_name + ')'
+    'background-image': 'url(' + bannerPath + bannerList[0].bannerImage_name + ')'
   }"
 >
   >

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { APIService } from 'src/app/services/api.service';
 import { environment } from 'src/environments/environment';
 
@@ -10,19 +11,25 @@ import { environment } from 'src/environments/environment';
 export class CarouselComponent {
   bannerList: any;
   bannerPath = environment.base_url + 'storage/bannerImages/';
+  subscription = new Subscription();
 
   constructor(private _APIService: APIService) {}
 
   ngOnInit() {
-    this._APIService.bannerList().subscribe((data: any) => {
-      if (data.bannerList) {
-        let bannerList = data.bannerList;
-        bannerList.forEach((item: any, index: any) => {
-          bannerList[index].bannerImage_name =
-            this.bannerPath + item.bannerImage_name;
-        });
-        this.bannerList = bannerList;
-      }
-    });
+    this.subscription.add(
+      this._APIService.bannerList().subscribe((data: any) => {
+        if (data.bannerList) {
+          let bannerList = data.bannerList;
+          bannerList.forEach((item: any, index: any) => {
+            bannerList[index].bannerImage_name = item.bannerImage_name;
+          });
+          this.bannerList = bannerList;
+        }
+      })
+    );
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

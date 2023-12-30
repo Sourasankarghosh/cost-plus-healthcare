@@ -4,18 +4,22 @@ import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   {
-    path:'',
-    loadChildren:() => import('./modules/home/home.module').then(m => m.HomeSectionModule)
+    path: '',
+    loadChildren: () =>
+      import('./modules/home/home.module').then((m) => m.HomeSectionModule),
   },
   {
     path: 'about',
     component: AboutComponent,
   },
   {
-    path: '**',
-    pathMatch: 'full',
-    redirectTo: '/',
+    path: 'product-categories',
+    loadChildren: () =>
+      import('./modules/product-categories/product-categories.module').then(
+        (m) => m.ProductCategoriesModule
+      ),
   },
+  { path:'**' , redirectTo:'/', pathMatch:'full'}
 ];
 
 @NgModule({
