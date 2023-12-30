@@ -3,11 +3,11 @@ import { APIService } from 'src/app/services/api.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-carousel',
+  templateUrl: './carousel.component.html',
+  styleUrls: ['./carousel.component.scss'],
 })
-export class HomeComponent {
+export class CarouselComponent {
   bannerList: any;
   bannerPath = environment.base_url + 'storage/bannerImages/';
 

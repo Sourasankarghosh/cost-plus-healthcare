@@ -1,14 +1,15 @@
 <div class="carousel-inner" *ngIf="bannerList && bannerList.length > 1">
-  <mdb-carousel [indicators]="true" [animation]="'fade'" [dark]="true">
+  <mdb-carousel [indicators]="true" [animation]="'fade'">
     <mdb-carousel-item *ngFor="let data of bannerList">
       <img
         [src]="data.bannerImage_name"
-        class="d-block w-100"
+        class="d-block w-100 carousel-img"
         [alt]="data.title"
       />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{ data.title }}</h5>
-        <p>{{ data.description }}</p>
+      <div class="overlay carousel-caption"></div>
+      <div class="carousel-caption text-content d-none d-md-block">
+        <h5 class="title">{{ data.title }}</h5>
+        <p class="description">{{ data.description }}</p>
       </div>
     </mdb-carousel-item>
   </mdb-carousel>

@@ -1,0 +1,25 @@
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  text-align: center;
+  opacity: 1;
+  height: 550px;
+}
+.text-content {
+  .title,
+  .description {
+    color: #fff !important;
+  }
+}
+
+.carousel-img {
+  width: 100% !important;
+  height: 512px !important;
+}
+
+.carousel-caption {
+  right: 0% !important;
+  left: 0% !important;
+}
