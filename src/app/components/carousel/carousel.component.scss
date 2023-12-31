@@ -14,8 +14,14 @@
 }
 
 .carousel-img {
-  width: 100% !important;
-  height: 512px !important;
+  @media screen and (min-width: 720px) {
+    width: 100% !important;
+    height: 550px !important;
+  }
+  @media screen and (max-width: 720px) {
+    width: 100% !important;
+    height: 150px !important;
+  }
 }
 
 .carousel-caption {
