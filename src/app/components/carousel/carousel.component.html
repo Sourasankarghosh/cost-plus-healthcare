@@ -1,5 +1,5 @@
 <div class="carousel-inner" *ngIf="bannerList && bannerList.length > 0">
-  <mdb-carousel [indicators]="true" [animation]="'fade'">
+  <mdb-carousel [indicators]="true" [animation]="'fade'" [controls]="true">
     <mdb-carousel-item *ngFor="let data of bannerList">
       <img
         [src]="bannerPath + data.bannerImage_name"

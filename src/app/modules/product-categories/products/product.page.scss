@@ -1,0 +1,25 @@
+.card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 75px;
+}
+.card-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.card-img-top {
+  width: 310px;
+  height: 206px;
+}
+.card {
+  border: 2px solid #13a2b7;
+}
+.breadcrumb-option {
+  background: url("../../../../assets//images/inner_bg.png");
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}

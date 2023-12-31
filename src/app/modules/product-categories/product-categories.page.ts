@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { APIService } from 'src/app/services/api.service';
 
@@ -11,7 +12,7 @@ export class ProductCategoriesPage {
   subscription = new Subscription();
   categoryList: any;
 
-  constructor(private _APIService: APIService) {}
+  constructor(private _APIService: APIService, private router: Router) {}
 
   ngOnInit() {
     this.subscription.add(
@@ -19,6 +20,10 @@ export class ProductCategoriesPage {
         this.categoryList = data.categoryList;
       })
     );
+  }
+
+  navigateToProduct(id: string) {
+    this.router.navigate([`product-categories/product/${parseInt(id)}`]);
   }
 
   ngOnDestroy() {

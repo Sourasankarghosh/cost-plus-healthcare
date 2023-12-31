@@ -52,4 +52,13 @@ export class APIService {
     }
     return this.categoryListSubject;
   }
+
+  productList(categoryId: number): Observable<any> {
+    return from(
+      this.http.get(
+        `${environment.base_url}api/product-category/product-list/${categoryId}`,
+        this.httpOptions
+      )
+    );
+  }
 }
