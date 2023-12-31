@@ -663,19 +663,19 @@ ol {
 }
 
 .services__item:hover {
-	background: #fff;
+	background: #13a2b7;
 }
 
 .services__item:hover .services__item__icon span {
-	color: #111111;
+	color: #ffffff;
 }
 
 .services__item:hover .services__item__text h5 {
-	color: #111111;
+	color: #ffffff;
 }
 
 .services__item:hover .services__item__text p {
-	color: #111111;
+	color: #ffffff;
 }
 
 .services__item__icon {
