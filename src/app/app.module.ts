@@ -8,21 +8,18 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeSectionModule } from 'src/app/modules/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    FooterComponent
-  ],
+  declarations: [AppComponent, NavComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HomeSectionModule
+    HomeSectionModule,
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
