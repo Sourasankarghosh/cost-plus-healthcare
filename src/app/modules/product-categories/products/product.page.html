@@ -1,8 +1,5 @@
 <!-- Breadcrumb Section Begin -->
-<section
-  class="breadcrumb-option spad set-bg"
-  data-setbg="img/breadcrumb-bg.jpg"
->
+<section class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -24,17 +21,13 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col" *ngFor="let data of productList">
         <div class="card h-100">
-          <img
-            [src]="bannerPath + data.thumbImage_name"
-            class="card-img-top"
-            alt="Hollywood Sign on The Hill"
-          />
+          <img [src]="bannerPath + data.thumbImage_name" class="card-img-top" alt="Hollywood Sign on The Hill" />
           <div class="card-body">
             <h5 class="card-title">{{data.name}}</h5>
             <p class="card-text">{{data.composition}}</p>
             <div class="row">
               <div class="col">
-                <a href="#" class="btn btn-primary">Details</a>
+                <a (click)="openModal(data)" class="primary-btn">Details</a>
               </div>
             </div>
           </div>

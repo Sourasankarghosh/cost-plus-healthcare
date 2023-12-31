@@ -1,0 +1,48 @@
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="modalRef.close()"
+  ></button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col">
+      <div class="h-100">
+        <img
+          [src]="bannerPath + product.fullImage_name"
+          class="card-img-top"
+          alt="Hollywood Sign on The Hill"
+        />
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">
+            <b>Composition</b> &nbsp;{{ product.composition }}
+          </p>
+          <p class="card-text">
+            <b>Indication</b> &nbsp;{{ product.indication }}
+          </p>
+          <div class="row">
+            <div class="col">
+              <p class="card-text">
+                <b>Packing</b> &nbsp;{{ product.packing }}
+              </p>
+            </div>
+            <div class="col">
+              <p class="card-text">
+                <b>PackType</b> &nbsp;{{ product.packType }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="primary-btn">
+    Business Opportunity with us
+  </button>
+</div>
